@@ -1,28 +1,28 @@
 @font-face {
     font-family: 'B';
-    src: url('font/TTLakes-Bold.eot');
-    src: url('font/TTLakes-Bold.eot?#iefix') format('embedded-opentype'),
-    url('font/TTLakes-Bold.woff') format('woff'),
-    url('font/TTLakes-Bold.ttf') format('truetype');
+    src: url('/font/TTLakes-Bold.eot');
+    src: url('/font/TTLakes-Bold.eot?#iefix') format('embedded-opentype'),
+    url('/font/TTLakes-Bold.woff') format('woff'),
+    url('/font/TTLakes-Bold.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'M';
-    src: url('font/TTLakes-Medium.eot');
-    src: url('font/TTLakes-Medium.eot?#iefix') format('embedded-opentype'),
-    url('font/TTLakes-Medium.woff') format('woff'),
-    url('font/TTLakes-Medium.ttf') format('truetype');
+    src: url('/font/TTLakes-Medium.eot');
+    src: url('/font/TTLakes-Medium.eot?#iefix') format('embedded-opentype'),
+    url('/font/TTLakes-Medium.woff') format('woff'),
+    url('/font/TTLakes-Medium.ttf') format('truetype');
     font-weight: lighter;
     font-style: normal;
 }
 @font-face {
     font-family: 'R';
-    src: url('font/TTLakes-Regular.eot');
-    src: url('font/TTLakes-Regular.eot?#iefix') format('embedded-opentype'),
-    url('font/TTLakes-Regular.woff') format('woff'),
-    url('font/TTLakes-Regular.ttf') format('truetype');
-    font-weight: lighter;
+    src: url('/font/TTLakes-Regular.eot');
+    src: url('/font/TTLakes-Regular.eot?#iefix') format('embedded-opentype'),
+    url('/font/TTLakes-Regular.woff') format('woff'),
+    url('/font/TTLakes-Regular.ttf') format('truetype');
+    font-weight: normal;
     font-style: normal;
 }
 
@@ -32,7 +32,103 @@ body{
 body h1{
     font-family: 'B';
 }
+.slide_menu{
+    overflow:scroll;
+}
+.menu{
+    height: 100%;
+    width: 320px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+    border: 1px solid black;
+    border-radius: 0px 5px 5px 0px;
+    max-width: 320px;
+    background: white;
+}
 
+
+.head_nav{
+    margin-bottom: 20px;
+    padding-top: 18px;
+    padding-left: 16px;
+    padding-right: 16px;
+    display: flex;
+}
+.head_nav button{
+    padding: 0px;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: 0px;
+}
+
+.head_nav button img{
+    width: 40px;
+    height: 40px;
+}
+.head_nav img{
+    width: 100px;
+    height: 50px;
+}
+
+
+
+.head_nav_left{
+    display: flex;
+    margin-right: auto;
+}
+.head_nav_left button{
+    margin-right: 16px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.head_nav_right{
+    display: flex;
+    margin-left: auto;
+}
+.head_nav_right button{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+
+
+.nav_panel{
+    display: flex;
+    flex-direction: column;
+}
+.nav_panel button{
+    width: 30px;
+    flex-shrink: 0;
+    margin-bottom: 20px;
+    border: 0px;
+    background: none;
+    display: flex;
+    width: 100%;
+}
+.nav_panel button:focus{
+    color: gray;
+}
+.nav_panel button:focus hr{
+
+    display: block;
+}
+.nav_panel button h3{
+    font-size: 16px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.nav_panel button hr{
+    display: none;
+    margin: 0px 10px 0px 0px;
+    width: 4px;
+    height: 30px;
+    background-color: rgba(65, 246, 215);
+    border: 0px;
+    border-radius: 0px 10px 10px 0px;
+}
 
 
 header{
@@ -42,11 +138,15 @@ header{
     display: flex;
 }
 header button{
+    border-radius: 100%;
     width: 40px;
     height: 40px;
     padding: 0px;
     background: none;
     border: 0px;
+}
+header button:hover{
+    box-shadow: 0px 0px 10px -1px rgba(255, 0, 157, 0.5);
 }
 header button img{
     width: 40px;
@@ -86,6 +186,18 @@ header img{
     height: 30px;
     border: 1px solid rgba(234, 234, 234, 1);
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -178,7 +290,11 @@ header img{
     }
 }
 
-
+@media(min-width: 1100px){
+    .slide_menu{
+        overflow:hidden;
+    }
+}
 
 .height_panel{
     height: 40px;
@@ -210,6 +326,7 @@ header img{
     margin-left: auto;
 }
 .right_main_items button{
+    border-radius: 100%;
     width: 40px;
     height: 40px;
     padding: 0px;
@@ -218,6 +335,9 @@ header img{
     margin-right: 16px;
     margin-top: auto;
     margin-bottom: auto;
+}
+.right_main_items button:hover{
+    box-shadow: 0px 0px 10px -1px rgba(255, 0, 157, 0.5);
 }
 .right_main_items button img{
     width: 40px;
@@ -233,7 +353,7 @@ header img{
 
 
 
-@media (min-width: 1120px){
+@media (min-width: 1366px){
 
 
     .info img{
@@ -264,7 +384,6 @@ header img{
 
 
 .slide_menu{
-    overflow: auto;
     padding-right: 16px;
     padding-left: 16px;
     max-width: 1060px;
@@ -284,6 +403,7 @@ header img{
     background: none;
 }
 .slide_menu button:focus{
+
     padding: 11px;
     border-radius: 6px;
     border: 2px solid rgba(184, 255, 236, 1);
