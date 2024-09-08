@@ -36,16 +36,33 @@ body h1{
     overflow:scroll;
 }
 .menu{
+    overflow: hidden;
     height: 100%;
     width: 320px;
     position: absolute;
     top: 0px;
     left: 0px;
-    z-index: 2;
-    border: 1px solid black;
-    border-radius: 0px 5px 5px 0px;
+    z-index: 3;
+    box-shadow: 10px 0px 10px -5px rgba(0, 0, 0, 0.2);
     max-width: 320px;
     background: white;
+    transition: transform 0.5s ease; /* Плавный переход для перемещения */
+}
+.hidden {
+    transform: translateX(-100%); 
+}
+.visible {
+    transform: translateX(0); 
+}
+.blur{
+    display: none;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    z-index: 2;
+    backdrop-filter: blur(5px);
+    width: 100%;
+    position: absolute;
 }
 
 
@@ -100,6 +117,7 @@ body h1{
     flex-direction: column;
 }
 .nav_panel button{
+    padding: 0px 0px 0px 0px;
     width: 30px;
     flex-shrink: 0;
     margin-bottom: 20px;
@@ -108,21 +126,23 @@ body h1{
     display: flex;
     width: 100%;
 }
-.nav_panel button:focus{
+.nav_panel button:hover{
+    color: gray;    
+
+}
+.nav_panel button h2{
+    margin: 0px 0px 0px 20px;
     color: gray;
 }
-.nav_panel button:focus hr{
-
-    display: block;
-}
 .nav_panel button h3{
+    margin-left: 20px;
     font-size: 16px;
     margin-top: auto;
     margin-bottom: auto;
 }
 .nav_panel button hr{
-    display: none;
-    margin: 0px 10px 0px 0px;
+    display: block;
+    margin: 0px -4px 0px 0px;
     width: 4px;
     height: 30px;
     background-color: rgba(65, 246, 215);
@@ -206,6 +226,7 @@ header img{
 }
 
 .main{
+    z-index: 1;
     margin-top: 30px;
 }
 

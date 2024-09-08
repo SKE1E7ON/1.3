@@ -1,14 +1,33 @@
-const buttons = document.querySelectorAll('.nav_panel button');
-        const secondButton = buttons[1];
+const button_close = document.getElementById("close")
+const button_show = document.getElementById("menu")
+const menu = document.getElementById("form_menu")
+const blurr = document.getElementById("blur")
 
-        // Устанавливаем фокус на вторую кнопку при загрузке страницы
-        window.onload = function() {
-            secondButton.focus();
-        };
+button_close.addEventListener('click', () => {
+    menu.classList.add('hidden');
+    menu.classList.remove('visible');
+    blurr.style.display = 'none';
+    // menu.style.display = 'none'
+});
 
-        // Перехватываем клик на документе и возвращаем фокус на вторую кнопку
-        document.addEventListener('click', function(event) {
-            if (!secondButton.contains(event.target)) {
-                secondButton.focus();
-            }
-        });
+button_show.addEventListener('click', () => {
+    menu.classList.add('visible');
+    menu.classList.remove('hidden');
+    blurr.style.display = 'block';
+    // menu.style.display = 'block'
+});
+
+// ▒▒▒▒▒▒▒▒▄▄▄▄▄▄▄▄▒▒▒▒▒▒
+// ▒▒█▒▒▒▄██████████▄▒▒▒▒
+// ▒█▐▒▒▒████████████▒▒▒▒
+// ▒▌▐▒▒██▄▀██████▀▄██▒▒▒
+// ▐┼▐▒▒██▄▄▄▄██▄▄▄▄██▒▒▒
+// ▐┼▐▒▒██████████████▒▒▒
+// ▐▄▐████─▀▐▐▀█─█─▌▐██▄▒
+// ▒▒█████──────────▐███▌
+// ▒▒█▀▀██▄█─▄───▐─▄███▀▒
+// ▒▒█▒▒███████▄██████▒▒▒
+// ▒▒▒▒▒██████████████▒▒▒
+// ▒▒▒▒▒█████████▐▌██▌▒▒▒
+// ▒▒▒▒▒▐▀▐▒▌▀█▀▒▐▒█▒▒▒▒▒
+// ▒▒▒▒▒▒▒▒▒▒▒▐▒▒▒▒▌▒▒▒▒▒
