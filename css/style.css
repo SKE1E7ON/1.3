@@ -27,6 +27,7 @@
 }
 
 body{
+    background-color: rgba(248, 248, 248, 1);
     margin: 0px;
 }
 body h1{
@@ -35,6 +36,17 @@ body h1{
 .slide_menu{
     overflow:scroll;
 }
+.main_menu_container{
+    display: flex;
+}
+.static_menu{
+    height: 100vh;
+    display: none;
+    background-color: rgb(255, 255, 255);
+    min-width: 320px;
+    max-width: 320px;
+}
+
 .menu{
     overflow: hidden;
     height: 100%;
@@ -49,11 +61,58 @@ body h1{
     transition: transform 0.5s ease; /* Плавный переход для перемещения */
 }
 .hidden {
-    transform: translateX(-100%); 
+    transform: translateX(-150%); 
 }
 .visible {
     transform: translateX(0); 
 }
+
+.bottom_naw_panel{
+    margin-top: 300px;
+}
+.bottom_naw_panel h3{
+    font-size: 16px;
+    font-family: 'R';
+    margin-left: 24px;
+}
+.bottom_naw_panel h2{
+    font-size: 24px;
+    font-family: 'B';
+    margin-left: 24px;
+}
+
+
+.interectiv_btn{
+    margin-left: 24px;
+}
+.interectiv_btn button{
+    margin-right: 16px;
+    border: 0px;
+    background: none;
+    padding: 0px;
+    width: 40px;
+    height: 40px;
+}
+.interectiv_btn button img{
+    padding: 0px;
+    width: 40px;
+    height: 40px;
+}
+
+.language_btn{
+    margin-left: 24px;
+}
+.language_btn button{
+    font-size: 16px;
+    font-family: "M";
+    padding: 0px;
+    border: 0px;
+    background: none;
+    margin-right: 10px;
+}
+
+
+
 .blur{
     display: none;
     top: 0px;
@@ -117,6 +176,7 @@ body h1{
     flex-direction: column;
 }
 .nav_panel button{
+    height: 20px;
     padding: 0px 0px 0px 0px;
     width: 30px;
     flex-shrink: 0;
@@ -131,6 +191,9 @@ body h1{
 
 }
 .nav_panel button h2{
+    font-size: 16px;
+    margin-top: auto;
+    margin-bottom: auto;
     margin: 0px 0px 0px 20px;
     color: gray;
 }
@@ -315,6 +378,7 @@ header img{
     .slide_menu{
         overflow:hidden;
     }
+
 }
 
 .height_panel{
@@ -399,6 +463,9 @@ header img{
     }
     main{
         margin-top: 28px;
+    }
+    .static_menu{
+        display: block;
     }
 }
 
