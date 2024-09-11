@@ -37,10 +37,12 @@ body h1{
     overflow:scroll;
 }
 .main_menu_container{
+    max-width: 1440px;
     display: flex;
 }
-.static_menu{
-    height: 100vh;
+.static_menu{   
+    min-height: 100vw;
+    height: 100%;
     display: none;
     background-color: rgb(255, 255, 255);
     min-width: 320px;
@@ -68,7 +70,8 @@ body h1{
 }
 
 .bottom_naw_panel{
-    margin-top: 300px;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 .bottom_naw_panel h3{
     font-size: 16px;
@@ -172,6 +175,7 @@ body h1{
 
 
 .nav_panel{
+    margin-bottom: 300px;
     display: flex;
     flex-direction: column;
 }
@@ -215,10 +219,14 @@ body h1{
 
 
 header{
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    background-color: white;
     padding-top: 18px;
     padding-left: 16px;
     padding-right: 16px;
     display: flex;
+    box-shadow: 0px 4px 10px 0px rgba(0, 255, 242, 0.2);
 }
 header button{
     border-radius: 100%;
@@ -290,7 +298,6 @@ header img{
 
 .main{
     z-index: 1;
-    max-width: 320px;
     margin-top: 30px;
 }
 
@@ -328,7 +335,15 @@ header img{
 }
 
 .Read_more{
+    padding: 0px;
+    border-radius: 10px;
+    border: 0px;
+    background: none;
     display: flex;
+}
+.Read_more:hover{
+    padding-right: 4px;
+    border: 2px solid aqua;
 }
 
 @media (min-width: 768px){
