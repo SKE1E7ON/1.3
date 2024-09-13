@@ -37,6 +37,8 @@ body h1{
     overflow:scroll;
 }
 .main_menu_container{
+    margin-left: auto;
+    margin-right: auto;
     max-width: 1560px;
     display: flex;
 }
@@ -193,13 +195,6 @@ body h1{
     color: gray;    
 
 }
-.nav_panel button h2{
-    font-size: 16px;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin: 0px 0px 0px 20px;
-    color: gray;
-}
 .nav_panel button h3{
     margin-left: 20px;
     font-size: 16px;
@@ -207,13 +202,19 @@ body h1{
     margin-bottom: auto;
 }
 .nav_panel button hr{
-    display: block;
+    display: none;
     margin: 0px -4px 0px 0px;
     width: 4px;
     height: 30px;
     background-color: rgba(65, 246, 215);
     border: 0px;
     border-radius: 0px 10px 10px 0px;
+}
+.nav_panel button:focus{
+    color: gray;
+}
+.nav_panel button:focus hr{
+    display: block;
 }
 
 
