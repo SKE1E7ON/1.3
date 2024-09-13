@@ -37,7 +37,7 @@ body h1{
     overflow:scroll;
 }
 .main_menu_container{
-    max-width: 1440px;
+    max-width: 1560px;
     display: flex;
 }
 .static_menu{   
@@ -71,7 +71,6 @@ body h1{
 
 .bottom_naw_panel{
     margin-top: auto;
-    margin-bottom: auto;
 }
 .bottom_naw_panel h3{
     font-size: 16px;
@@ -175,7 +174,7 @@ body h1{
 
 
 .nav_panel{
-    margin-bottom: 300px;
+    margin-bottom: 30px;
     display: flex;
     flex-direction: column;
 }
@@ -297,6 +296,7 @@ header img{
 }
 
 .main{
+    width: 100%;
     z-index: 1;
     margin-top: 30px;
 }
@@ -478,10 +478,17 @@ header img{
         display: flex;
     }
     main{
+        max-width: 100%;
+        min-width: 50%;
         margin-top: 28px;
     }
     .static_menu{
         display: block;
+    }
+    .nav_panel{
+        margin-bottom: 300px;
+        display: flex;
+        flex-direction: column;
     }
 }
 
